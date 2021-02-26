@@ -25,6 +25,7 @@ const initialFormValues = {
 }
 
 const initialFormErrors = {
+  name: '',
   size: '',
   quantity: '',
   sauce: '',
