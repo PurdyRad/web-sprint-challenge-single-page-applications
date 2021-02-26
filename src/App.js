@@ -79,7 +79,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    formSchema.isValid(formValues).then(valid => setDisabled(valid))
+    formSchema.isValid(formValues).then(valid => setDisabled(!valid))
   }, [formValues])
 
   return (
@@ -88,7 +88,7 @@ const App = () => {
         <div className='homeCont'>
           <h1 className='pizzaHeader'>Lambda Eats</h1>
           <Link to='/'>Home</Link>
-          <Link to='/Confirmation'>Pizzas in the Works</Link>
+          <Link to='/PizzaBuilder/Confirmation'>Pizzas in the Works</Link>
         </div>
       </nav>
       <Switch>

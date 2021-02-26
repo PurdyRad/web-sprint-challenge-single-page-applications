@@ -16,7 +16,7 @@ const PizzaBuilder = (props) => {
 
 
     return (
-        <form className='formCont' onsubmit={onSubmit}> 
+        <form className='formCont' onSubmit={onSubmit}> 
             <div className='PizzaBuilder'>
                  <h2>Lets Make A Pie</h2>
                 <div className='errors'>

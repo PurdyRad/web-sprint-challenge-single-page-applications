@@ -2,9 +2,7 @@ import * as yup from 'yup'
 
 const formSchema = yup.object().shape({
     specialInstruction: yup.string()
-        .trim()
-        .required('Username is required, please fill out.')
-        .min(3, 'Username must be 3 characters long'),
+        .trim(),
     name: yup.string()
         .trim()
         .required('Please provide a name')
