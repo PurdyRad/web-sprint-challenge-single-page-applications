@@ -9,7 +9,7 @@ const Confirmation = ({details}) => {
         <div className='pizzaContainer'>
             <p>{details.name}'s {details.size} Pie</p>
             <br></br> With a beautiful {details.sauce} base
-            <br></br> Piled high with {details.toppings}
+            <br></br> Piled high with {details.toppings} 
         </div>
     )
 }
