@@ -30,7 +30,8 @@ const PizzaBuilder = (props) => {
                     <label>Name
                         <input 
                         value={values.name} 
-                        onChange={onChange} 
+                        onChange={onChange}
+                        id='nameid' 
                         name='name' 
                         type='text'
                         />
@@ -168,7 +169,7 @@ const PizzaBuilder = (props) => {
                             <option value='3'>3</option>
                         </select>
                     </label>
-                    <button disabled={disabled}>Gimmie Some Pizza</button>
+                    <button id ='ID' disabled={disabled}>Gimmie Some Pizza</button>
                 </div>
             </div>
         </form> 
