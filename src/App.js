@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Route, Switch, Link, useHistory } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 import PizzaBuilder from './PizzaBuilder'
 import Confirmation from './Confirmation'
 import Home from './Home'
 import formSchema from './formSchema'
 import * as yup from 'yup'
+import styled from 'styled-components'
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  background: chocolate;
+`;
 
 const initialFormValues = {
   //Drop down
@@ -85,11 +94,11 @@ const App = () => {
   return (
     <>
       <nav>
-        <div className='homeCont'>
+        <StyledDiv className='homeCont'>
           <h1 className='pizzaHeader'>Lambda Eats</h1>
           <Link to='/'>Home</Link>
           <Link to='/PizzaBuilder/Confirmation'>Pizzas in the Works</Link>
-        </div>
+        </StyledDiv>
       </nav>
       <Switch>
         <Route path={`/PizzaBuilder/Confirmation`}>

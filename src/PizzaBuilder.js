@@ -1,4 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const StyledDiv = styled.div`
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-evenly
+`;
+
+const StyledErrors = styled.div `
+    background: palegoldenrod;
+    color: red
+`;
 
 const PizzaBuilder = (props) => {
     const { values, change, submit, disabled, errors } = props
@@ -17,14 +29,14 @@ const PizzaBuilder = (props) => {
 
     return (
         <form className='formCont' onSubmit={onSubmit}> 
-            <div className='PizzaBuilder'>
+            <StyledDiv className='PizzaBuilder'>
                  <h2>Lets Make A Pie</h2>
-                <div className='errors'>
+                <StyledErrors className='errors'>
                   <div>{errors.size}</div>
                   <div>{errors.sauce}</div>
                   <div>{errors.quantity}</div>
                   <div>{errors.name}</div>
-                </div>
+                </StyledErrors>
                 <div className='inputs'>
                     <div className='sizes'>
                     <label>Name
@@ -171,7 +183,7 @@ const PizzaBuilder = (props) => {
                     </label>
                     <button id ='ID' disabled={disabled}>Gimmie Some Pizza</button>
                 </div>
-            </div>
+            </StyledDiv>
         </form> 
 
     )

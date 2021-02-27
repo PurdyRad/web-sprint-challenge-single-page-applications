@@ -1,4 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const StyledDiv = styled.div`
+    border: 10px solid darkseagreen;
+`;
 
 const Confirmation = ({details}) => {
     if (!details) {
@@ -6,11 +11,11 @@ const Confirmation = ({details}) => {
     }
 
     return (
-        <div className='pizzaContainer'>
+        <StyledDiv className='pizzaContainer'>
             <p>{details.name}'s {details.size} Pie</p>
             <br></br> With a beautiful {details.sauce} base
             <br></br> Piled high with {details.toppings} 
-        </div>
+        </StyledDiv>
     )
 }
 
